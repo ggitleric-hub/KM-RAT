@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "main": "electron/main.js",
+  "description": "Grob Rat RAT - Remote Administration Tool",
+  "author": "Grob Rat",
   "scripts": {
     "dev": "cross-env NODE_ENV=development electron .",
     "dev:next": "next dev",
@@ -70,10 +72,10 @@
     "vaul": "1.1.2",
     "websockets": "0.2.0",
     "ws": "8.19.0",
-    "zod": "3.25.76",
-    "electron": "36.0.0"
+    "zod": "3.25.76"
   },
   "devDependencies": {
+    "electron": "36.0.0",
     "@electron/notarize": "^1.2.4",
     "@tailwindcss/postcss": "^4.1.9",
     "@types/better-sqlite3": "^7.6.12",
