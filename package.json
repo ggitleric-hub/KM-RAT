@@ -156,15 +156,9 @@
       "oneClick": false,
       "perMachine": false,
       "allowToChangeInstallationDirectory": true,
-      "menuFolder": "Grob Rat RAT",
-      "uninstallDisplayName": "Grob Rat RAT",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "Grob Rat RAT",
-      "installMode": "full",
-      "runAfterFinish": true,
-      "showWelcomePage": true,
-      "showInstallationFolderChoice": true
+      "shortcutName": "Grob Rat RAT"
     },
     "linux": {
       "target": ["AppImage", "deb"],
