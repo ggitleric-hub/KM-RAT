@@ -1,0 +1,127 @@
+{
+  "appId": "com.grobrat.rat",
+  "productName": "Grob Rat RAT",
+  "copyright": "Copyright © 2024 Grob Rat",
+  "directories": {
+    "output": "release",
+    "buildResources": "electron/resources"
+  },
+  "files": [
+    {
+      "from": ".",
+      "filter": [
+        "!node_modules/**",
+        "!electron/**",
+        "!out/**",
+        "!release/**",
+        "!.git/**",
+        "!.next/**",
+        "!public/**",
+        "!scripts/**",
+        "!server/**",
+        "!styles/**",
+        "!components/**",
+        "!app/**",
+        "!lib/**",
+        "!hooks/**",
+        "!client/**"
+      ]
+    },
+    {
+      "from": "out",
+      "to": "."
+    },
+    {
+      "from": "electron",
+      "to": "."
+    },
+    {
+      "from": "public",
+      "to": "public"
+    }
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64", "ia32"]
+      },
+      {
+        "target": "zip",
+        "arch": ["x64", "ia32"]
+      }
+    ],
+    "icon": "public/icon.ico",
+    "artifactName": "GrobRat-${version}.${ext}",
+    "sign": false,
+    "signAndEditExecutable": false,
+    "requested-execution-level": "asInvoker",
+    "runtimeSignature": "Microsoft Corporation",
+    "verifyUpdateCodeSignature": false,
+    "publisherName": "Grob Rat",
+    "legalTrademarks": "Grob Rat",
+    "preDownloadScript": "pre-download.ps1",
+    "postDownloadScript": "post-download.ps1"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "menuFolder": "Grob Rat RAT",
+    "uninstallDisplayName": "Grob Rat RAT",
+    "include": "electron/installer.nsh",
+    "license": "electron/LICENSE.txt",
+    "licenseUrl": null,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Grob Rat RAT",
+    "deleteAppDataOnUninstall": false,
+    "allowElevation": false,
+    "allowRootInstallation": false,
+    "installerIcon": "public/icon.ico",
+    "uninstallerIcon": "public/icon.ico",
+    "installMode": "full",
+    "warningsAsErrors": false,
+    "useZipCompression": false,
+    "runAfterFinish": true,
+    "runAfterFinishParam": "",
+    "showWelcomePage": true,
+    "showInstallationFolderChoice": true,
+    "showUninstallWelcomePage": true,
+    "enableWindowResize": false,
+    "enableComponentsTree": false,
+    "forceWebAssembly": false
+  },
+  "mac": {
+    "target": ["dmg", "zip"],
+    "icon": "public/icon.icns",
+    "artifactName": "GrobRat-${version}.${ext}",
+    "hardenedRuntime": true,
+    "entitlements": "electron/entitlements.plist",
+    "entitlementsInherit": "electron/entitlements.plist",
+    "signatureFlags": ["library"]
+  },
+  "linux": {
+    "target": ["AppImage", "snap", "deb"],
+    "icon": "public/icon.png",
+    "artifactName": "GrobRat-${version}.${ext}",
+    "synopsis": "Grob Rat RAT - Remote Administration Tool",
+    "description": "Grob Rat RAT - Remote Administration Tool",
+    "category": "Network",
+    "mimeTypes": []
+  },
+  "npmRebuild": false,
+  "buildDependenciesFromSource": false,
+  "nodeGypRebuild": false,
+  "nodeIntegration": false,
+  "ignoreScripts": false,
+  "forceCodeSigning": false,
+  "publish": null,
+  "afterPack": "electron/after-pack.js",
+  "afterSign": "electron/after-sign.js",
+  "beforeBuild": "electron/before-build.js",
+  "beforePack": "electron/before-pack.js",
+  "extraMetadata": {
+    "main": "electron/main.js"
+  }
+}

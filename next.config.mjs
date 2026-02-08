@@ -9,6 +9,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  
+  // Конфигурация для статического экспорта (требуется для Electron)
+  output: 'export',
+  
+  // Настройка для Electron - отключаем server-only модули
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+  },
 }
 
 // t.me/SentinelLinks
