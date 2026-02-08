@@ -10,10 +10,7 @@ const nextConfig = {
     unoptimized: true,
   },
   
-  // Конфигурация для статического экспорта (требуется для Electron)
-  output: 'export',
-  
-  // Настройка для Electron - отключаем server-only модули
+  // Конфигурация для Electron - отключаем server-only модули
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb',

@@ -11,8 +11,7 @@
     "build:electron:win": "npm run build && electron-builder --win --x64 --ia32",
     "build:electron:dir": "npm run build && electron-builder --win --dir",
     "start": "cross-env NODE_ENV=production electron .",
-    "lint": "eslint .",
-    "postinstall": "electron-builder install-app-deps"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
